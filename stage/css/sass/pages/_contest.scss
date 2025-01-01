@@ -1,0 +1,246 @@
+.contest-guidelines {
+  counter-set: guidelines -1;
+
+  .child {
+    color: $primary-color;
+
+    // color: $primary-color;
+
+    // &:nth-child(odd) {
+    //   background-color: $marian-blue;
+    // }
+
+    // &:nth-child(even) {
+    //   background-color: $carrbiean-current;
+    // }
+
+    counter-increment: guidelines;
+
+    .container {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+
+      @media (max-width: 767.98px) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        display: flex;
+
+        .counter {
+          display: flex;
+          flex-basis: 200px;
+          font-size: 2rem;
+          transform: translateY(-5px);
+
+          color: black;
+
+          &::before {
+            content: "0" counter(guidelines);
+          }
+        }
+      }
+
+      .right {
+        flex-basis: calc(100% - 200px);
+
+        .heading {
+          text-indent: -5px;
+          color: $carrbiean-current;
+
+          font: {
+            family: $syne-font;
+            weight: bold;
+          }
+        }
+
+
+        .text {
+          border-left: 3px solid $carrbiean-current;
+
+          padding: 1.5rem {
+            right: 0;
+          }
+
+          ul {
+            list-style: disc inside;
+
+            li:not(:last-child) {
+              margin-bottom: 0.5rem;
+            }
+          }
+
+          p {
+            text-align: justify;
+          }
+
+          .main-btn {
+            @media (max-width: 767.98px) {
+              font-size: 1rem
+            }
+          }
+
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Timeline
+.contest-guidelines .child.dates .container .right {
+
+  .timeline {
+    border-left: none;
+    line-height: 1.4em;
+    list-style: none;
+
+    margin: 0 {
+      top: 2rem;
+    }
+
+    ;
+    padding: 0;
+    width: 100%;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+    position: relative;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  .timeline-info {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 .5em 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+
+    &:before {
+      background: $primary-color;
+      border: 3px solid transparent;
+      border-radius: 100%;
+      content: "";
+      display: block;
+      height: 15px;
+      position: absolute;
+      top: 4px;
+      left: 0;
+      width: 15px;
+      transition: background 0.3s ease-in-out,
+        border 0.3s ease-in-out;
+    }
+
+    &:after {
+      content: "";
+      width: 3px;
+      background: #CCD5DB;
+      display: block;
+      position: absolute;
+      top: 24px;
+      bottom: 0;
+      left: 6px;
+    }
+
+    .timeline-item:last-child &:after {
+      content: none;
+    }
+  }
+
+  .timeline-item:not(.period):hover .timeline-marker:before {
+    background: transparent;
+    border: 3px solid $primary-color;
+  }
+
+  .timeline-content {
+    padding-bottom: 40px;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .period {
+    padding: 0;
+
+    .timeline-info {
+      display: none;
+    }
+
+    .timeline-marker {
+      &:before {
+        background: transparent;
+        content: "";
+        width: 15px;
+        height: auto;
+        border: none;
+        border-radius: 0;
+        top: 0;
+        bottom: 30px;
+        position: absolute;
+        border-top: 3px solid #CCD5DB;
+        border-bottom: 3px solid #CCD5DB;
+      }
+
+      &:after {
+        content: "";
+        height: 32px;
+        top: auto;
+      }
+    }
+
+    .timeline-content {
+      padding: 40px 0 70px;
+    }
+
+    .timeline-title {
+      margin: 0;
+    }
+  }
+
+  .marker-outline {
+    .timeline-marker {
+      &:before {
+        background: transparent;
+        border-color: $primary-color;
+      }
+    }
+
+    .timeline-item:hover .timeline-marker:before {
+      background: $primary-color;
+    }
+  }
+}
+
+// Studying Materials
+.contest-guidelines .child.materials .container .right .text {
+  border-left: none;
+
+  .card {
+    a {
+      display: block;
+      padding: 0.5rem;
+      text-decoration: none;
+      color: white;
+      border-radius: 5px;
+      text-align: center;
+      background-color: $fulvous;
+    }
+  }
+}

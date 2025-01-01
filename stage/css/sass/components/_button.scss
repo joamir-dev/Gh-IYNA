@@ -1,0 +1,46 @@
+.main-btn {
+  border-radius: 1rem;
+  padding: 0.7rem 1.8rem;
+  display: inline-block;
+
+  font: {
+    size: 1.3rem;
+    weight: bold;
+  }
+
+  transition: $trans-duration;
+
+  &:hover {
+    color: white !important;
+    background-color: $secondary-color !important;
+    transform: scale(1.1);
+  }
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 0;
+  width: fit-content;
+  padding: 0.5rem;
+  border-bottom: 1px solid $fulvous;
+
+  svg {
+    color: $fulvous;
+  }
+
+
+  // Hover Effect
+  transition: $trans-duration background;
+
+  &:hover {
+    color: white;
+
+    svg {
+      color: inherit;
+    }
+
+    background-color: $fulvous;
+  }
+}

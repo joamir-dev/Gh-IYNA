@@ -1,0 +1,22 @@
+.navbar {
+  .title {
+    font-family: $syne-font;
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 0 !important;
+
+    li a {
+      display: block;
+      padding: 1rem !important;
+      transition: $trans-duration;
+
+      &:hover,
+      &.active {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  }
+}

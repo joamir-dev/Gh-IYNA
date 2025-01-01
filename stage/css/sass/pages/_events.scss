@@ -1,0 +1,52 @@
+.events-landing {
+
+  .heading {
+    font-size: 3rem;
+    font-family: $syncopate-font !important;
+  }
+}
+
+.events-gallery {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .card {
+    border: none;
+
+    img {
+      border-radius: 1rem;
+
+      @media (min-width: 768px) {
+        width: 280px;
+        height: 230px;
+      }
+    }
+
+    .card-body {
+      padding: 1.5rem 5px;
+
+      p.date {
+        line-height: 1.7;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #DDD;
+      }
+
+      .card-title {
+        margin-top: 2rem;
+        font-family: $syne-font;
+      }
+
+      p.desc {
+        font-size: 0.9rem;
+        text-align: justify;
+      }
+
+      a {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

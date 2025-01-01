@@ -1,0 +1,23 @@
+// Helpers
+@import "./sass/helpers/variables";
+@import "./sass/helpers/mixins";
+@import "./sass/helpers/classes";
+// Components
+@import "./sass/components/button";
+// Layout
+@import "./sass/layout/global-rules";
+
+body {
+  // Layout
+  @import "./sass/layout/navbar";
+  @import "./sass/components/landing";
+  @import "./sass/layout/footer";
+  // Pages
+  @import "./sass/pages/home";
+  @import "./sass/pages/about";
+  @import "./sass/pages/events";
+  @import "./sass/pages/journals";
+  @import "./sass/pages/program";
+  @import "./sass/pages/contest";
+  @import "./sass/pages/contact";
+}

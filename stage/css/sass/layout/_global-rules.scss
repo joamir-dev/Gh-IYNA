@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; // For Animations overflow
+
+  * {
+    outline: none;
+  }
+  body {
+    font-family: $body-primary-font;
+  }
+  p {
+    font-family: $body-secondary-font;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+}
+
+body > {
+  // Pre-loader
+
+  // Scroll To Top
+  .scroll-top {
+    $size: 40px;
+
+    position: fixed;
+    bottom: 20px;
+    right: -100px;
+    width: $size;
+    height: $size;
+    z-index: 1200;
+    cursor: pointer;
+    transition: right 0.5s;
+    // color: $dark-off-black;
+    background-color: white;
+    &.show {
+      right: 20px;
+    }
+
+    svg {
+      animation: scroll-scale infinite ease 2s;
+      @keyframes scroll-scale {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}

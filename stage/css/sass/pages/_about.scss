@@ -1,0 +1,66 @@
+.about-landing {
+  .image {
+    img {
+      width: fit-content;
+      max-width: 600px;
+    }
+  }
+}
+
+.mission-vision {
+  .row {
+    @media (min-width: 767.98px) {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 90%;
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+.values {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3rem;
+  }
+}
+
+.team {
+  .row {
+    align-items: center;
+  }
+  .card {
+    position: relative;
+    max-width: 350px;
+    margin: {
+      bottom: 2.5rem;
+      left: 60px;
+    }
+
+    .image {
+      position: absolute !important;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -60px;
+
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50% !important;
+      }
+    }
+
+    .card-body {
+      padding-left: calc(60px + 2rem);
+    }
+  }
+}
